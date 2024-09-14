@@ -1,0 +1,42 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+jspm_packages/
+
+# Environment variables
+.env
+
+# Build output
+dist/
+build/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Parcel-bundler cache (if used)
+.cache/
+
+# React Native
+.expo/
+.expo-shared/
+
+# IDE settings
+.idea/
+.vscode/
+*.swp
+
+# macOS-specific files
+.DS_Store
+
+# Miscellaneous
+*.log
+*.lock
+coverage/
