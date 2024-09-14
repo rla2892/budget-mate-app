@@ -30,7 +30,6 @@ build/
 
 # IDE settings
 .idea/
-.vscode/
 *.swp
 
 # macOS-specific files
