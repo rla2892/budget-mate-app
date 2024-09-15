@@ -1,4 +1,3 @@
-// src/store/transactionsSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { Transaction } from '../types/transaction' // 타입 정의 가져오기
 
