@@ -24,6 +24,8 @@ const TransactionForm: React.FC = () => {
         <form onSubmit={handleSubmit}>
             <input
                 type="number"
+                id="transaction-amount"
+                data-testid="transaction-amount"
                 value={amount}
                 onChange={(e) => setAmount(Number(e.target.value))}
             />
