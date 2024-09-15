@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addTransaction } from '../store/transactionsSlice'
 import { Transaction } from '../types/transaction'
+import { v4 as uuidv4 } from 'uuid'
 
 const TransactionForm: React.FC = () => {
     const [amount, setAmount] = useState(0)
@@ -11,7 +12,7 @@ const TransactionForm: React.FC = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
         const newTransaction: Transaction = {
-            id: Date.now().toString(),
+            id: uuidv4(),
             amount,
             type,
             category: `Other`,
