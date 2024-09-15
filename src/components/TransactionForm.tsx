@@ -15,7 +15,7 @@ const TransactionForm: React.FC = () => {
             amount,
             type,
             category: `Other`,
-            date: new Date(),
+            date: new Date().toISOString(),
         }
         dispatch(addTransaction(newTransaction))
     }
