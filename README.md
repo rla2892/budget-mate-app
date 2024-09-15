@@ -26,3 +26,42 @@ src/
 ├── App.tsx             # Main app component
 ├── index.tsx           # App entry point
 ```
+
+## How to start
+```bash
+npm start
+```
+
+## How to build
+```bash
+npm run build
+```
+
+## How to test
+```bash
+npm test
+```
+
+## How to lint
+```bash
+npm run lint
+```
+
+<!-- ## How to format
+```bash
+npm run format
+``` -->
+
+## Technologies
+- **React**: JavaScript library for building user interfaces
+- **TypeScript**: Typed superset of JavaScript that compiles to plain JavaScript
+- **Redux**: State management library for JavaScript applications
+- **Jest**: JavaScript testing framework
+- **React Testing Library**: Testing utilities for React components
+- **ESLint**: JavaScript linter tool
+- **Chart.js**: Simple yet flexible JavaScript charting library
+<!-- - **React Chartjs 2**: React wrapper for Chart.js -->
+- **Tailwind CSS**: Utility-first CSS framework
+
+## License(Apache)
+This project is open source and available under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
