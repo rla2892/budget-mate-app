@@ -3,7 +3,7 @@ import { Category } from "./category"
 import { Transaction } from "./transaction"
 import { User } from "./user"
 
-export interface RootState {
+export type RootState = {
   transactions: Transaction[];
   budget: Budget;
   categories: Category[];
