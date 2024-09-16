@@ -1,12 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import transactionsReducer from './transactionsSlice'
 import categoriesReducer from './categoriesSlice'
-
+import budgetReducer from './budgetSlice'
 
 export const store = configureStore({
     reducer: {
         transactions: transactionsReducer,  // 슬라이스 리듀서를 연결
         categories: categoriesReducer,  // 카테고리 슬라이스 리듀서를 연결
+        budget: budgetReducer,  // 예산 슬라이스 리듀서를 연결
     },
 })
 

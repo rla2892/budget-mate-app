@@ -1,10 +1,13 @@
 import React from 'react'
+import BudgetForm from '../components/BudgetForm'
+import BudgetSummary from '../components/BudgetSummary'
 
 const Budget: React.FC = () => {
     return (
         <div>
-            <h1>Budget</h1>
-            <p>Manage your budget here.</p>
+            <h1>Budget Management</h1>
+            <BudgetForm />
+            <BudgetSummary />
         </div>
     )
 }
