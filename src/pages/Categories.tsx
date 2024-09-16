@@ -4,10 +4,14 @@ import CategoryList from '../components/CategoryList'
 
 const Categories: React.FC = () => {
     return (
-        <div>
-            <h1>Categories</h1>
-            <CategoryForm />
-            <CategoryList />
+        <div className="container mx-auto p-4">
+            <h1 className="text-3xl font-bold mb-4">Categories</h1>
+            <div className="mb-8">
+                <CategoryForm />
+            </div>
+            <div className="mb-8">
+                <CategoryList />
+            </div>
         </div>
     )
 }

@@ -22,20 +22,32 @@ const CategoryForm: React.FC = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Category Name"
-                required
-            />
-            <input
-                type="color"
-                value={color}
-                onChange={(e) => setColor(e.target.value)}
-            />
-            <Button type="submit">Add Category</Button>
+        <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="flex space-x-4">
+                <div className="flex-1">
+                    <label htmlFor="category-name" className="block text-sm font-medium text-gray-700">Category Name</label>
+                    <input
+                        type="text"
+                        id="category-name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Category Name"
+                        required
+                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    />
+                </div>
+                <div className="flex-1">
+                    <label htmlFor="category-color" className="block text-sm font-medium text-gray-700">Category Color</label>
+                    <input
+                        type="color"
+                        id="category-color"
+                        value={color}
+                        onChange={(e) => setColor(e.target.value)}
+                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    />
+                </div>
+            </div>
+            <Button type="submit" >Add Category</Button>
         </form>
     )
 }

@@ -12,29 +12,17 @@ const CategoryList: React.FC = () => {
     }
 
     return (
-        <ul>
-            {categories.map((category) => (
-                <li key={category.id}
-                    style={{
-                        display: `flex`,
-                        justifyContent: `normal`,
-                        alignItems: `center`,
-                        marginBottom: `10px`,
-                    }}
-                >
-                    <span>{category.name}</span>
-                    <span style={
-                        {
-                            backgroundColor: category.color,
-                            display: `inline-block`,
-                            width: `20px`,
-                            height: `20px`,
-                        }
-                    }></span>
-                    <button onClick={() => handleDelete(category.id)}>Delete</button>
-                </li>
-            ))}
-        </ul>
+        <div className="p-4 bg-white rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold mb-4">Category List</h2>
+            <ul className="space-y-2">
+                {categories.map((category) => (
+                    <li key={category.id} className="p-4 border border-gray-300 rounded-md shadow-sm flex justify-between items-center">
+                        <span className="font-semibold">{category.name}</span>
+                        <span className="w-6 h-6 rounded-full" style={{ backgroundColor: category.color }}></span>
+                    </li>
+                ))}
+            </ul>
+        </div>
     )
 }
 
