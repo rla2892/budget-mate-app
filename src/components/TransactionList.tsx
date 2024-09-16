@@ -13,25 +13,31 @@ const TransactionList: React.FC = () => {
 
 
     return (
-        <div>
+        <div className="space-y-4">
             <div>
-                <label htmlFor="category">Filter by Category</label>
+                <label htmlFor="category-filter" className="block text-sm font-medium text-gray-700">Filter by Category</label>
                 <select
+                    id="category-filter"
+                    value={selectedCategory || undefined}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    defaultValue=""
+                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 >
-                    <option value="">All Categories</option>
-                    {categories.map((category) => (
+                    <option value="All">All</option>
+                    {categories.map((category: any) => (
                         <option key={category.id} value={category.name}>
                             {category.name}
                         </option>
                     ))}
                 </select>
             </div>
-            <ul>
-                {filteredTransactions.map((transaction) => (
-                    <li key={transaction.id}>
-                        {transaction.type}: {transaction.amount} : {transaction.category}
+            <ul className="space-y-2">
+                {filteredTransactions.map((transaction: any) => (
+                    <li key={transaction.id} className="p-4 border border-gray-300 rounded-md shadow-sm">
+                        <div className="flex justify-between">
+                            <span className="font-semibold">{transaction.type}</span>
+                            <span>{transaction.amount}</span>
+                        </div>
+                        <div className="text-gray-500">{transaction.category}</div>
                     </li>
                 ))}
             </ul>
