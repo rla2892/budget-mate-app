@@ -1,17 +1,23 @@
 import React from 'react'
 import BudgetSummary from '../components/BudgetSummary'
 import TransactionList from '../components/TransactionList'
-import CategoryExpenseChart from '../components/CategoryExpenseChart' // 카테고리 차트 컴포넌트 (구현 예정)
+import CategoryExpenseChart from '../components/CategoryExpenseChart'
 
 const Dashboard: React.FC = () => {
     return (
-        <div>
-            <h1>Dashboard</h1>
-            <BudgetSummary />
-            <h2>Recent Transactions</h2>
-            <TransactionList />
-            <h2>Category-wise Expense</h2>
-            <CategoryExpenseChart />  {/* 카테고리별 지출 차트 */}
+        <div className="container mx-auto p-4">
+            <h1 className="text-3xl font-bold mb-4">Dashboard</h1>
+            <div className="mb-8">
+                <BudgetSummary />
+            </div>
+            <h2 className="text-2xl font-semibold mb-4">Recent Transactions</h2>
+            <div className="mb-8">
+                <TransactionList />
+            </div>
+            <h2 className="text-2xl font-semibold mb-4">Category-wise Expense</h2>
+            <div className="mb-8 flex justify-center">
+                <CategoryExpenseChart />
+            </div>
         </div>
     )
 }
