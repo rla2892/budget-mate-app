@@ -4,6 +4,7 @@ import { addTransaction } from '../store/transactionsSlice'
 import { Transaction } from '../types/transaction'
 import { v4 as uuidv4 } from 'uuid'
 import { RootState } from '../store'
+import Button from './Button'
 
 const TransactionForm: React.FC = () => {
     const [amount, setAmount] = useState(0)
@@ -42,7 +43,7 @@ const TransactionForm: React.FC = () => {
                     <option key={category.id} value={category.name}>{category.name}</option>
                 ))}
             </select>
-            <button type="submit">Add Transaction</button>
+            <Button type="submit">Add Transaction</Button>
         </form>
     )
 }

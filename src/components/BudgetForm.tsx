@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { setBudget } from '../store/budgetSlice'
 import { Budget } from '../types/budget'
+import Button from './Button'
 
 const BudgetForm: React.FC = () => {
     const [amount, setAmount] = useState(0)
@@ -51,7 +52,7 @@ const BudgetForm: React.FC = () => {
                     required
                 />
             </div>
-            <button type="submit">Set Budget</button>
+            <Button type="submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded">Set Budget</Button>
         </form>
     )
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addCategory } from '../store/categoriesSlice'
 import { Category } from '../types/category'
+import Button from './Button'
 
 const CategoryForm: React.FC = () => {
     const [name, setName] = useState(``)
@@ -34,7 +35,7 @@ const CategoryForm: React.FC = () => {
                 value={color}
                 onChange={(e) => setColor(e.target.value)}
             />
-            <button type="submit">Add Category</button>
+            <Button type="submit">Add Category</Button>
         </form>
     )
 }
