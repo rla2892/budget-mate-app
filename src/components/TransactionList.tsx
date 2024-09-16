@@ -9,7 +9,7 @@ const TransactionList: React.FC = () => {
         <ul>
             {transactions.map((transaction) => (
                 <li key={transaction.id}>
-                    {transaction.type}: {transaction.amount}
+                    {transaction.type}: {transaction.amount} : {transaction.category}
                 </li>
             ))}
         </ul>
