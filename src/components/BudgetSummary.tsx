@@ -19,12 +19,14 @@ const BudgetSummary: React.FC = () => {
     const isOverBudget = remainingBudget < 0
 
     return (
-        <div>
-            <h2>Budget Summary</h2>
-            <p>Total Budget: {budget.amount}</p>
-            <p>Total Expenses: {totalExpenses}</p>
-            <p>Remaining Budget: {budget.amount - totalExpenses}</p>
-            {isOverBudget && <p style={{ color: `red` }}>Warning: You are over your budget!</p>}
+        <div className="p-4 bg-white rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold mb-4">Budget Summary</h2>
+            <p className="text-lg">Total Budget: <span className="font-semibold">{budget.amount}</span></p>
+            <p className="text-lg">Total Expenses: <span className="font-semibold">{totalExpenses}</span></p>
+            <p className={`text-lg ${isOverBudget ? `text-red-500` : `text-green-500`}`}>
+                Remaining Budget: <span className="font-semibold">{remainingBudget}</span>
+            </p>
+            {isOverBudget && <p className="text-red-500 font-bold">Warning: You are over your budget!</p>}
         </div>
     )
 }
