@@ -1,10 +1,13 @@
 import React from 'react'
+import CategoryForm from '../components/CategoryForm'
+import CategoryList from '../components/CategoryList'
 
 const Categories: React.FC = () => {
     return (
         <div>
             <h1>Categories</h1>
-            <p>Manage your transaction categories here.</p>
+            <CategoryForm />
+            <CategoryList />
         </div>
     )
 }
