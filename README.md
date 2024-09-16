@@ -15,9 +15,7 @@ The project is structured to separate concerns and ensure maintainability. The t
 ```bash
 src/
 ├── components/         # UI components
-├── hooks/              # Custom React hooks
 ├── pages/              # Application pages
-├── services/           # Business logic and API services
 ├── store/              # Redux store configuration
 ├── types/              # TypeScript interfaces and types
 │   ├── transaction.ts  # Transaction-related types
@@ -61,7 +59,7 @@ npm run format
 - **ESLint**: JavaScript linter tool
 - **Chart.js**: Simple yet flexible JavaScript charting library
 <!-- - **React Chartjs 2**: React wrapper for Chart.js -->
-- **Tailwind CSS**: Utility-first CSS framework
+<!-- - **Tailwind CSS**: Utility-first CSS framework -->
 
 ## License(Apache)
 This project is open source and available under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
